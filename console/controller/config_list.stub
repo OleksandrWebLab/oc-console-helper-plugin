@@ -1,0 +1,16 @@
+title: Manage {{title_plural_name}}
+modelClass: {{studly_author}}\{{studly_plugin}}\Models\{{studly_model}}
+list: $/{{lower_author}}/{{lower_plugin}}/models/{{lower_model}}/columns.yaml
+recordUrl: {{lower_author}}/{{lower_plugin}}/{{lower_name}}/update/:id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showPageNumbers: true
+showSetup: true
+showSorting: true
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+
+    search:
+        prompt: backend::lang.list.search_prompt

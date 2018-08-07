@@ -1,0 +1,23 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Updates;
+
+use October\Rain\Database\Schema\Blueprint;
+use October\Rain\Database\Updates\Migration;
+use October\Rain\Support\Facades\Schema;
+
+class Migration_{{snake_singular_name}}_1_0 extends Migration
+{
+    public function up()
+    {
+        Schema::create('{{lower_author}}_{{lower_plugin}}_tab_{{snake_singular_name}}', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('{{lower_author}}_{{lower_plugin}}_tab_{{snake_singular_name}}');
+    }
+}

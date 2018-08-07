@@ -1,0 +1,26 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Console;
+
+use Illuminate\Console\Command;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
+
+class {{studly_name}} extends Command
+{
+    protected $name = '{{lower_plugin}}:{{lower_name}}';
+    protected $description = 'No description provided yet...';
+
+    public function handle()
+    {
+        $this->output->writeln('Hello world!');
+    }
+
+    protected function getArguments()
+    {
+        return [];
+    }
+
+    protected function getOptions()
+    {
+        return [];
+    }
+}

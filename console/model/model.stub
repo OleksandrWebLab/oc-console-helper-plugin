@@ -1,0 +1,8 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Models;
+
+use October\Rain\Database\Model;
+
+class {{studly_name}} extends Model
+{
+    public $table = '{{lower_author}}_{{lower_plugin}}_tab_{{snake_singular_name}}';
+}

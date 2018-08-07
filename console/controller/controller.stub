@@ -1,0 +1,24 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Controllers;
+
+use Backend\Behaviors\FormController;
+use Backend\Behaviors\ListController;
+use Backend\Classes\Controller;
+use Backend\Facades\BackendMenu;
+
+class {{studly_name}} extends Controller
+{
+    public $implement = [
+        FormController::class,
+        ListController::class,
+    ];
+
+    public $formConfig = 'config_form.yaml';
+    public $listConfig = 'config_list.yaml';
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        BackendMenu::setContext('{{studly_author}}.{{studly_plugin}}', '{{lower_plugin}}', '{{lower_name}}');
+    }
+}

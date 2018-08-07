@@ -1,0 +1,17 @@
+name: {{title_singular_name}}
+modelClass: {{studly_author}}\{{studly_plugin}}\Models\{{studly_model}}
+form: $/{{lower_author}}/{{lower_plugin}}/models/{{lower_model}}/fields.yaml
+defaultRedirect: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
+
+create:
+    title: Create {{title_singular_name}}
+    redirect: {{lower_author}}/{{lower_plugin}}/{{lower_name}}/update/:id
+    redirectClose: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
+
+update:
+    title: Edit {{title_singular_name}}
+    redirect: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
+    redirectClose: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
+
+preview:
+    title: Preview {{title_singular_name}}
