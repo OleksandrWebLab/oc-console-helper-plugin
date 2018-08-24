@@ -8,38 +8,34 @@ class CreatePlugin extends GeneratorCommand
 {
     /**
      * The console command name.
-     *
      * @var string
      */
     protected $name = 'hcreate:plugin';
 
     /**
      * The console command description.
-     *
      * @var string
      */
     protected $description = 'Creates a new plugin.';
 
     /**
      * The type of class being generated.
-     *
      * @var string
      */
     protected $type = 'Plugin';
 
     /**
      * A mapping of stub to generated file.
-     *
      * @var array
      */
     protected $stubs = [
-        'plugin/plugin.stub'  => 'Plugin.php',
-        'plugin/version.stub' => 'updates/version.yaml',
+        'plugin/plugin.stub'        => 'Plugin.php',
+        'plugin/version.stub'       => 'updates/version.yaml',
+        'plugin/create_seeder.stub' => 'updates/Seeder.php',
     ];
 
     /**
      * Prepare variables for stubs.
-     *
      * return @array
      */
     protected function prepareVars()
@@ -63,12 +59,13 @@ class CreatePlugin extends GeneratorCommand
         return [
             'name'   => $pluginName,
             'author' => $authorName,
+            'year'   => date('Y'),
+            'month'  => date('m'),
         ];
     }
 
     /**
      * Get the console command arguments.
-     *
      * @return array
      */
     protected function getArguments()
@@ -80,7 +77,6 @@ class CreatePlugin extends GeneratorCommand
 
     /**
      * Get the console command options.
-     *
      * @return array
      */
     protected function getOptions()

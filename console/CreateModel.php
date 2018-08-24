@@ -8,40 +8,35 @@ class CreateModel extends GeneratorCommand
 {
     /**
      * The console command name.
-     *
      * @var string
      */
     protected $name = 'hcreate:model';
 
     /**
      * The console command description.
-     *
      * @var string
      */
     protected $description = 'Creates a new model.';
 
     /**
      * The type of class being generated.
-     *
      * @var string
      */
     protected $type = 'Model';
 
     /**
      * A mapping of stub to generated file.
-     *
      * @var array
      */
     protected $stubs = [
-        'model/model.stub'        => 'models/{{studly_name}}.php',
-        'model/fields.stub'       => 'models/{{lower_name}}/fields.yaml',
-        'model/columns.stub'      => 'models/{{lower_name}}/columns.yaml',
-        'model/create_table.stub' => 'updates/migration_{{snake_singular_name}}_1_0.php',
+        'model/model.stub'            => 'models/{{studly_name}}.php',
+        'model/fields.stub'           => 'models/{{lower_name}}/fields.yaml',
+        'model/columns.stub'          => 'models/{{lower_name}}/columns.yaml',
+        'model/create_migration.stub' => 'updates/Migration_{{studly_name}}_1_0.php',
     ];
 
     /**
      * Prepare variables for stubs.
-     *
      * return @array
      */
     protected function prepareVars()
@@ -55,15 +50,14 @@ class CreateModel extends GeneratorCommand
         $model = $this->argument('model');
 
         return [
-            'name' => $model,
+            'name'   => $model,
             'author' => $author,
-            'plugin' => $plugin
+            'plugin' => $plugin,
         ];
     }
 
     /**
      * Get the console command arguments.
-     *
      * @return array
      */
     protected function getArguments()
@@ -76,7 +70,6 @@ class CreateModel extends GeneratorCommand
 
     /**
      * Get the console command options.
-     *
      * @return array
      */
     protected function getOptions()

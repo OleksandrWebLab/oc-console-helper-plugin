@@ -1,0 +1,11 @@
+<?php namespace {{studly_author}}\{{studly_name}}\Updates;
+
+use October\Rain\Database\Updates\Seeder as SeederBase;
+
+class Seeder extends SeederBase
+{
+    public function run()
+    {
+
+    }
+}
